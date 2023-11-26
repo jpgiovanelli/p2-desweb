@@ -1,6 +1,4 @@
 
-localStorage.setItem('senha', '')
-
 const form = document.getElementById('form')
 const button = document.createElement('button')
 button.innerText = 'Ir'
