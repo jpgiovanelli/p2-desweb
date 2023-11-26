@@ -4,6 +4,17 @@ const div_primaria = document.getElementById('options')
 
 if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
 
+    const header = document.getElementById('header')
+    const exit_button = document.createElement('button')
+    exit_button.className = 'exit'
+    exit_button.innerText = 'Sair'
+
+    exit_button.addEventListener('click', () => {
+        window.location.href = '/'
+    })
+
+    header.appendChild(exit_button)
+
     const select_ = document.createElement('select') 
 
     select_.id = 'menuopt'
@@ -36,7 +47,6 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
         else {
             text_value = text_value.toLowerCase()
         }
-        console.log(text_value)
         fetch_api(text_value)
 
     }
@@ -49,19 +59,10 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
         const tamanho = atletas.length
 
         var element = document.getElementById('info')
-        element.style.display = 'flex'
-        element.style.flexWrap = 'wrap'
-        element.style.justifyContent = 'space-between'
 
         for (var i = 0; i < tamanho; i++) {
             var div = document.createElement('article')
             div.id = `atleta ${i}` 
-            div.style.background = "gray"
-            div.style.color = "white"
-            div.style.width = "20rem"
-            div.style.display = 'flex'
-            div.style.flexDirection = 'column'
-            div.style.margin = '10px'
 
             div.dataset.id = atletas[i].id
             div.dataset.altura = atletas[i].altura
@@ -82,7 +83,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
             div.appendChild(tag2)
 
             var tag3 = document.createElement('p')
-            var text = document.createTextNode(atletas[i].descricao)
+            var text = document.createTextNode('Saiba mais')
             tag3.style.textAlign = 'center'
             tag3.appendChild(text)
             div.appendChild(tag3)

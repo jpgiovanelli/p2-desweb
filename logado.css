@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: grey;
 }
 
 select {
@@ -13,3 +14,76 @@ select {
 select option {
     text-align: center;
 }
+
+header {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+}
+
+header > div > p {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+}
+
+.exit {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: black;
+    border-radius: 100px;
+    margin-right: 40px;
+}
+
+.logo-btf {
+    width: 50px;
+    margin-top: 6%;
+}
+
+#info > article {
+    background-color: white;
+    color: black;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1024px)  {
+    #info {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px)  {
+    #info {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 10px;
+    }
+}
+
+
+
+
+
