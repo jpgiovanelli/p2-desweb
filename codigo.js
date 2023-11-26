@@ -23,6 +23,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
     exit_button.innerText = 'Sair'
 
     exit_button.addEventListener('click', () => {
+        localStorage.setItem('senha', '')
         window.location.href = './'
     })
 
@@ -194,6 +195,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
 
 else {
     window.location.href = './'
+    localStorage.setItem('senha', '')
 }
 
 

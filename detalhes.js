@@ -94,4 +94,5 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
 }
 else {
     window.location.href = './'
+    localStorage.setItem('senha', '')
 }
