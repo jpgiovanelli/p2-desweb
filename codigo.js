@@ -1,8 +1,21 @@
 
 const seguir = localStorage.getItem('senha')
 const div_primaria = document.getElementById('options')
+const div_sec = document.getElementById('options2')
 
 if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
+
+    const handle = (e) => {
+        let text_value = String(e.target.value) 
+        if (text_value == 'Todos') {
+            text_value = 'all'
+        }
+        else {
+            text_value = text_value.toLowerCase()
+        }
+        fetch_api(text_value)
+
+    }
 
     const header = document.getElementById('header')
     const exit_button = document.createElement('button')
@@ -14,6 +27,28 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
     })
 
     header.appendChild(exit_button)
+
+    const bt1 = document.createElement('button')
+    const bt2 = document.createElement('button')
+    const bt3 = document.createElement('button')
+
+    bt1.innerText = 'Masculino'
+    bt2.innerText = 'Feminino'
+    bt3.innerText = 'Todos'
+
+    bt1.addEventListener('click', () => {
+        handle({ target: { value: bt1.innerText } });
+    });
+    bt2.addEventListener('click', () => {
+        handle({ target: { value: bt2.innerText } });
+    });
+    bt3.addEventListener('click', () => {
+        handle({ target: { value: bt3.innerText } });
+    });
+
+    div_sec.appendChild(bt1)
+    div_sec.appendChild(bt2)
+    div_sec.appendChild(bt3)
 
     const select_ = document.createElement('select') 
 
@@ -38,18 +73,6 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
     body.style.display = 'flex'
     body.style.flexDirection = 'column'
     body.style.alignItems = 'center'
-
-    const handle = (e) => {
-        let text_value = String(e.target.value) 
-        if (text_value == 'Todos') {
-            text_value = 'all'
-        }
-        else {
-            text_value = text_value.toLowerCase()
-        }
-        fetch_api(text_value)
-
-    }
 
     const select = document.getElementById('menuopt')
     select.addEventListener('change', handle)
@@ -149,7 +172,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
         h1_carregando.id = 'texto carregado'
 
         carregando.appendChild(h1_carregando)
-        select.parentElement.appendChild(carregando)
+        element.appendChild(carregando)
 
         variar_texto()
 
