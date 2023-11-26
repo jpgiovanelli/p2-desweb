@@ -10,7 +10,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
     exit_button.innerText = 'Sair'
 
     exit_button.addEventListener('click', () => {
-        window.location.href = '/'
+        window.location.href = './'
     })
 
     header.appendChild(exit_button)
