@@ -97,7 +97,7 @@ if (seguir == '81dc9bdb52d04dc20036dbd8313ed055'){
         const artigo = e.target.closest('article')
         const id = artigo.dataset.id
     
-        window.location.href = `detalhes.html?id=${id}`
+        window.location.href = `./detalhes.html?id=${id}`
     }
 
     const variar_texto = async () => {
