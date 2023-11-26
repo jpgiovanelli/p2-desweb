@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="/escudo.png" sizes="16x16">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/build/md5.min.js"></script>
+    <script defer src="response.js"></script>
+</head>
+<body>
+    <header>
+        <p>Atletas Botafogo</p>
+        <img class="logo-btf" src="escudo.png" alt="SellersFlow Icon">
+    </header>
+    <main>
+        <div class="caixa-retangular">
+            <login-element>
+                <div id="form">
+                    <div class="label">
+                        <h1>Login</h1>
+                        <p>Insira suas credenciais</p>
+                    </div>
+                    <div class="login">
+                        <username>
+                            <img class="user-icon" src="user.png" alt="User Icon">
+                            <input id="username" type="text" placeholder="Usuário">
+                        </username>
+                        <password>
+                            <img class="pass-icon" src="lock.png" alt="Password Icon">
+                            <input id="password" type="password" placeholder="Senha: 1234">
+                        </password>
+                    </div>
+                </div>
+            </login-element>
+        </div>
+    </main>
+    <div style="height: 100px;"></div>
+</body>
+</html>
